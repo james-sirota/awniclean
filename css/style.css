@@ -935,14 +935,6 @@ h1 em { color: var(--terracotta); font-weight: 600; }
   background-image: linear-gradient(90deg, rgba(255, 253, 250, 0.98) 0%, rgba(255, 253, 250, 0.91) 40%, rgba(255, 253, 250, 0.18) 73%, rgba(255, 253, 250, 0.06) 100%), url('../images/cleaning-process-bg.jpg');
   background-position: center;
 }
-#offer.hero::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  inset: 0 auto 0 0;
-  width: 9px;
-  background: repeating-linear-gradient(135deg, var(--terracotta) 0 9px, #fff7ec 9px 18px);
-}
 #offer.hero::after {
   content: 'AWNICLEAN · PHOENIX, ARIZONA';
   position: absolute;
