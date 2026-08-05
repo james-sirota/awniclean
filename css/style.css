@@ -702,8 +702,8 @@ details.faq p { margin-top: 12px; }
   padding: 64px 0;
   text-align: center;
 }
-.page-hero h1 { color: var(--white); margin-bottom: 0.4em; }
-.page-hero p { color: #e6dcca; max-width: 620px; margin: 0 auto; font-size: 1.05rem; }
+.page-hero h1 { color: var(--white); max-width: 520px; margin-bottom: 0.4em; }
+.page-hero p { color: #e6dcca; max-width: 530px; margin: 0 auto; font-size: 1.05rem; }
 .breadcrumbs { font-size: 0.85rem; color: #bfb29b; margin-bottom: 1em; }
 .breadcrumbs a { color: #bfb29b; }
 
@@ -883,4 +883,136 @@ details.faq p { margin-top: 12px; }
   }
   .mobile-call-bar .icon { width: 20px; height: 20px; }
   body { padding-bottom: 56px; }
+}
+
+/* ==========================================================================
+   AwniClean brand refresh — warm, striped, and intentionally tactile
+   ========================================================================== */
+:root {
+  --navy: #262626;
+  --navy-light: #3c3835;
+  --terracotta: #c85c2e;
+  --terracotta-dark: #9e4321;
+  --cream: #f5f1e8;
+  --gray-900: #262626;
+  --gray-700: #615b55;
+  --gray-500: #817970;
+  --gray-200: #e8e1d6;
+  --gray-100: #f5f1e8;
+  --radius: 4px;
+  --shadow-sm: 0 3px 12px rgba(38, 38, 38, 0.08);
+  --shadow-md: 0 16px 32px rgba(38, 38, 38, 0.12);
+  --shadow-lg: 0 24px 56px rgba(38, 38, 38, 0.16);
+}
+
+body { background: #fffdfa; }
+h1, h2, h3, h4 { letter-spacing: -0.025em; }
+h1 em { color: var(--terracotta); font-weight: 600; }
+.section-alt {
+  background-color: var(--cream);
+  background-image: linear-gradient(135deg, rgba(200, 92, 46, 0.035) 25%, transparent 25%, transparent 50%, rgba(200, 92, 46, 0.035) 50%, rgba(200, 92, 46, 0.035) 75%, transparent 75%);
+  background-size: 18px 18px;
+}
+
+.site-header { background: rgba(255, 253, 250, 0.94); border-bottom: 1px solid rgba(38, 38, 38, 0.12); }
+.header-inner { padding-top: 12px; padding-bottom: 12px; }
+.logo-header-img { height: 56px; }
+.site-nav a { letter-spacing: 0.01em; }
+.site-nav a.nav-pill { background: #f1eadf; }
+.btn { border-radius: 3px; letter-spacing: 0.01em; }
+.btn-primary { box-shadow: 4px 4px 0 var(--navy); }
+.btn-primary:hover { box-shadow: 6px 6px 0 var(--navy); }
+.btn-call { background: var(--navy); }
+.btn-outline-navy { border-width: 1px; }
+
+#offer.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 645px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-image: linear-gradient(90deg, rgba(255, 253, 250, 0.98) 0%, rgba(255, 253, 250, 0.91) 40%, rgba(255, 253, 250, 0.18) 73%, rgba(255, 253, 250, 0.06) 100%), url('../images/cleaning-process-bg.jpg');
+  background-position: center;
+}
+#offer.hero::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0 auto 0 0;
+  width: 9px;
+  background: repeating-linear-gradient(135deg, var(--terracotta) 0 9px, #fff7ec 9px 18px);
+}
+#offer.hero::after {
+  content: 'AWNICLEAN · PHOENIX, ARIZONA';
+  position: absolute;
+  right: -2.6rem;
+  bottom: 2.25rem;
+  color: rgba(38, 38, 38, 0.42);
+  font-size: 0.64rem;
+  letter-spacing: 0.2em;
+  transform: rotate(-90deg);
+}
+.hero .container { position: relative; width: 100%; }
+.hero-copy { max-width: 690px; margin: 0; text-align: left; padding: 1.2rem 0 1.6rem 2rem; }
+.hero-copy .eyebrow { position: relative; padding-left: 46px; }
+.hero-copy .eyebrow::before { content: ''; position: absolute; left: 0; top: 50%; width: 32px; height: 2px; background: var(--terracotta); }
+.hero-copy h1 { font-size: clamp(3rem, 4.1vw, 4.55rem); line-height: 0.98; margin-bottom: 0.38em; }
+.hero-copy > p { max-width: 570px; font-size: 1.06rem; color: #4c4742; }
+.hero-copy .feature-tags, .hero-copy .cta-actions { justify-content: flex-start; }
+.hero-copy .feature-tags { gap: 8px; }
+.hero-copy .feature-tags span { border-radius: 2px; box-shadow: none; background: rgba(255, 253, 250, 0.8); padding: 8px 12px; }
+.hero-note { margin-top: 1.5rem !important; font-size: 0.84rem !important; letter-spacing: 0.025em; }
+.hero-note strong { color: var(--terracotta-dark); }
+.hero-stamp {
+  position: absolute;
+  right: 3rem;
+  bottom: 1.8rem;
+  display: grid;
+  place-items: center;
+  width: 126px;
+  height: 126px;
+  border: 1px solid rgba(255, 253, 250, 0.85);
+  border-radius: 50%;
+  color: #fffdfa;
+  text-align: center;
+  background: rgba(38, 38, 38, 0.62);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
+}
+.hero-stamp span { align-self: end; font-size: 0.56rem; font-weight: 700; letter-spacing: 0.14em; }
+.hero-stamp strong { align-self: start; font-family: var(--font-head); font-size: 1.05rem; line-height: 1; }
+
+.section-head { margin-bottom: 3.5rem; }
+.section-head .eyebrow { color: var(--terracotta-dark); }
+.card, .package-card, .form-card, .material-card { border-radius: 4px; }
+.card { border-top: 3px solid transparent; }
+.card:hover { border-top-color: var(--terracotta); }
+.package-card { border: 1px solid #ded5c8; box-shadow: 0 4px 0 #ded5c8; }
+.package-card.featured { border-top: 5px solid var(--terracotta); box-shadow: 8px 8px 0 rgba(38, 38, 38, 0.13); }
+.package-ribbon { border-radius: 0; }
+.billing-toggle-inner { border-radius: 3px; }
+.billing-toggle label { border-radius: 2px; }
+.trust-bar { background: var(--navy); border: 0; }
+.trust-grid div { color: #fffdfa; }
+.trust-grid .icon { color: #efbd9f; }
+.site-footer { background: #f7f2e9; }
+.page-hero { position: relative; overflow: hidden; text-align: left; background: var(--navy); }
+.page-hero::after { content: ''; position: absolute; right: -8%; top: -150%; width: 50%; height: 420%; transform: rotate(21deg); background: repeating-linear-gradient(90deg, rgba(200, 92, 46, 0.88) 0 26px, rgba(255, 253, 250, 0.92) 26px 52px); }
+.page-hero .container { position: relative; z-index: 1; }
+.page-hero p { margin-left: 0; }
+
+@media (max-width: 900px) {
+  #offer.hero { min-height: 0; background-image: linear-gradient(90deg, rgba(255, 253, 250, 0.95), rgba(255, 253, 250, 0.74)), url('../images/cleaning-process-bg.jpg'); }
+  .hero-copy { max-width: 680px; padding: 1.6rem 0 2rem 1.6rem; }
+  .hero-stamp, #offer.hero::after { display: none; }
+}
+@media (max-width: 560px) {
+  .hero-copy { padding-left: 1.25rem; }
+  .hero-copy h1 { font-size: clamp(2.75rem, 14vw, 4rem); }
+  .hero-copy .feature-tags { justify-content: flex-start; }
+  .hero-copy .feature-tags span { padding: 7px 10px; font-size: 0.76rem; }
+  .hero-copy .cta-actions { align-items: stretch; }
+  .hero-copy .cta-actions .btn { justify-content: center; }
+  .page-hero::after { right: -31%; width: 48%; }
 }
