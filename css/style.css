@@ -983,30 +983,6 @@ h1 em { color: var(--terracotta); font-weight: 600; }
 .hero-stamp span { align-self: end; font-size: 0.56rem; font-weight: 700; letter-spacing: 0.14em; }
 .hero-stamp strong { align-self: start; font-family: var(--font-head); font-size: 1.05rem; line-height: 1; }
 
-.risk-section { background: #fffdfa; padding-bottom: 52px; }
-.risk-layout { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 76px; align-items: center; }
-.risk-layout h2 { font-size: clamp(2.3rem, 3.4vw, 3.8rem); }
-.risk-lead { font-size: 1.18rem; color: var(--navy); font-weight: 600; }
-.risk-card { background: var(--cream); padding: 34px; border: 1px solid var(--gray-200); box-shadow: 9px 9px 0 var(--terracotta); }
-.risk-card-label { margin-bottom: 16px; color: var(--terracotta-dark); font-size: 0.76rem; font-weight: 800; letter-spacing: 0.13em; text-transform: uppercase; }
-.risk-list { list-style: none; margin: 0; padding: 0; }
-.risk-list li { display: grid; grid-template-columns: 30px 1fr; column-gap: 11px; padding: 13px 0; border-top: 1px solid #dfd6c8; }
-.risk-list li:first-child { border-top: 0; padding-top: 0; }
-.risk-list span { grid-row: span 2; font-size: 1.18rem; }
-.risk-list strong { color: var(--navy); font-size: 0.96rem; }
-.risk-list small { color: var(--gray-700); font-size: 0.82rem; }
-.ownership-promise { display: flex; align-items: center; gap: 20px; margin-top: 58px; color: var(--terracotta-dark); }
-.ownership-promise p { color: inherit; white-space: nowrap; margin: 0; font-family: var(--font-head); font-size: clamp(1.45rem, 2.4vw, 2.15rem); font-style: italic; }
-.promise-line { width: 100%; height: 1px; background: var(--terracotta); opacity: 0.5; }
-
-.commercial-section { background: var(--navy); color: #fffdfa; position: relative; overflow: hidden; }
-.commercial-section::after { content: ''; position: absolute; inset: 0 -11% 0 auto; width: 30%; opacity: 0.24; background: repeating-linear-gradient(135deg, var(--terracotta) 0 23px, transparent 23px 46px); }
-.commercial-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 76px; align-items: center; }
-.commercial-section h2 { color: #fffdfa; font-size: clamp(2.2rem, 3.2vw, 3.5rem); }
-.commercial-section p { color: #ded6ca; max-width: 590px; }
-.commercial-list { list-style: none; margin: 0; padding: 24px 26px; background: rgba(255, 253, 250, 0.08); border: 1px solid rgba(255, 253, 250, 0.25); }
-.commercial-list li { padding: 12px 0; border-bottom: 1px solid rgba(255, 253, 250, 0.18); font-weight: 600; }
-.commercial-list li:last-child { border-bottom: 0; }
 
 .section-head { margin-bottom: 3.5rem; }
 .section-head .eyebrow { color: var(--terracotta-dark); }
@@ -1031,7 +1007,6 @@ h1 em { color: var(--terracotta); font-weight: 600; }
   #offer.hero { min-height: 0; background-image: linear-gradient(90deg, rgba(255, 253, 250, 0.95), rgba(255, 253, 250, 0.74)), url('../images/cleaning-process-bg.jpg'); }
   .hero-copy { max-width: 680px; padding: 1.6rem 0 2rem 1.6rem; }
   .hero-stamp, #offer.hero::after { display: none; }
-  .risk-layout, .commercial-grid { grid-template-columns: 1fr; gap: 34px; }
 }
 @media (max-width: 560px) {
   .hero-copy { padding-left: 1.25rem; }
@@ -1041,8 +1016,4 @@ h1 em { color: var(--terracotta); font-weight: 600; }
   .hero-copy .cta-actions { align-items: stretch; }
   .hero-copy .cta-actions .btn { justify-content: center; }
   .page-hero::after { right: -31%; width: 48%; }
-  .risk-card { padding: 25px 22px; box-shadow: 6px 6px 0 var(--terracotta); }
-  .ownership-promise { gap: 12px; margin-top: 42px; }
-  .ownership-promise p { white-space: normal; text-align: center; }
-  .commercial-list { padding: 18px; }
 }
