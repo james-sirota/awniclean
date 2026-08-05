@@ -63,7 +63,7 @@ ul { padding-left: 1.2em; }
   padding: 0 24px;
 }
 
-section { padding: 72px 0; }
+section { padding: 64px 0; }
 section[id] { scroll-margin-top: 88px; }
 .section-alt { background: var(--cream); }
 .section-navy { background: var(--navy); color: var(--white); }
@@ -928,25 +928,13 @@ h1 em { color: var(--terracotta); font-weight: 600; }
 #offer.hero {
   position: relative;
   isolation: isolate;
-  min-height: 645px;
-  display: flex;
-  align-items: center;
   overflow: hidden;
+  padding: 82px 0 72px;
   background-image: linear-gradient(90deg, rgba(255, 253, 250, 0.98) 0%, rgba(255, 253, 250, 0.91) 40%, rgba(255, 253, 250, 0.18) 73%, rgba(255, 253, 250, 0.06) 100%), url('../images/cleaning-process-bg.jpg');
   background-position: center;
 }
-#offer.hero::after {
-  content: 'AWNICLEAN · PHOENIX, ARIZONA';
-  position: absolute;
-  right: -2.6rem;
-  bottom: 2.25rem;
-  color: rgba(38, 38, 38, 0.42);
-  font-size: 0.64rem;
-  letter-spacing: 0.2em;
-  transform: rotate(-90deg);
-}
 .hero .container { position: relative; width: 100%; }
-.hero-copy { max-width: 690px; margin: 0; text-align: left; padding: 1.2rem 0 1.6rem 2rem; }
+.hero-copy { max-width: 650px; margin: 0; text-align: left; padding: 0; }
 .hero-copy .eyebrow { position: relative; padding-left: 46px; }
 .hero-copy .eyebrow::before { content: ''; position: absolute; left: 0; top: 50%; width: 32px; height: 2px; background: var(--terracotta); }
 .hero-copy h1 { font-size: clamp(3rem, 4.1vw, 4.55rem); line-height: 0.98; margin-bottom: 0.38em; }
@@ -958,7 +946,7 @@ h1 em { color: var(--terracotta); font-weight: 600; }
 .hero-note strong { color: var(--terracotta-dark); }
 
 
-.section-head { margin-bottom: 3.5rem; }
+.section-head { margin-bottom: 2.5rem; }
 .section-head .eyebrow { color: var(--terracotta-dark); }
 .card, .package-card, .form-card, .material-card { border-radius: 4px; }
 .card { border-top: 3px solid transparent; }
@@ -978,12 +966,11 @@ h1 em { color: var(--terracotta); font-weight: 600; }
 .page-hero p { margin-left: 0; }
 
 @media (max-width: 900px) {
-  #offer.hero { min-height: 0; background-image: linear-gradient(90deg, rgba(255, 253, 250, 0.95), rgba(255, 253, 250, 0.74)), url('../images/cleaning-process-bg.jpg'); }
-  .hero-copy { max-width: 680px; padding: 1.6rem 0 2rem 1.6rem; }
-  .hero-stamp, #offer.hero::after { display: none; }
+  #offer.hero { padding: 64px 0; background-image: linear-gradient(90deg, rgba(255, 253, 250, 0.95), rgba(255, 253, 250, 0.74)), url('../images/cleaning-process-bg.jpg'); }
+  .hero-copy { max-width: 680px; }
 }
 @media (max-width: 560px) {
-  .hero-copy { padding-left: 1.25rem; }
+  #offer.hero { padding: 52px 0; }
   .hero-copy h1 { font-size: clamp(2.75rem, 14vw, 4rem); }
   .hero-copy .feature-tags { justify-content: flex-start; }
   .hero-copy .feature-tags span { padding: 7px 10px; font-size: 0.76rem; }
