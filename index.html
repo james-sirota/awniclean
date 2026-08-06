@@ -248,45 +248,45 @@
                                 AwniCare gives yours the care it needs to stay protected and look its best.
                             </p>
                         <div class="feature-tags">
-                            <span
+                            <a href="#packages"
                                 ><svg class="icon">
                                     <use href="#icon-droplet"></use></svg
-                                >UV Defense</span
+                                >UV Defense</a
                             >
-                            <span
+                            <a href="#packages"
                                 ><svg class="icon">
                                     <use href="#icon-frame"></use></svg
-                                >Hardware Care</span
+                                >Hardware Care</a
                             >
-                            <span
+                            <a href="#packages"
                                 ><svg class="icon">
                                     <use href="#icon-search"></use></svg
-                                >Mold Prevention</span
+                                >Mold Prevention</a
                             >
-                            <span
+                            <a href="#packages"
                                 ><svg class="icon">
                                     <use href="#icon-sun"></use></svg
-                                >UV Protection</span
+                                >UV Protection</a
                             >
-                            <span
+                            <a href="#packages"
                                 ><svg class="icon">
                                     <use href="#icon-sparkle"></use></svg
-                                >Deep Clean</span
+                                >Deep Clean</a
                             >
-                            <span
+                            <a href="#packages"
                                 ><svg class="icon">
                                     <use href="#icon-check-circle"></use></svg
-                                >Spot Removal</span
+                                >Spot Removal</a
                             >
-                            <span
+                            <a href="#packages"
                                 ><svg class="icon">
                                     <use href="#icon-wind"></use></svg
-                                >Touch-Up</span
+                                >Touch-Up</a
                             >
-                            <span
+                            <a href="#packages"
                                 ><svg class="icon">
                                     <use href="#icon-bell"></use></svg
-                                >Repair Alerts</span
+                                >Repair Alerts</a
                             >
                         </div>
                         <p class="hero-note">First maintenance visit from <strong>$59</strong> &nbsp;·&nbsp; Serving the greater Phoenix area</p>
@@ -683,29 +683,25 @@
 
                     <div class="form-card">
                         <h2>Request Your Visit</h2>
-                        <!--
-          Formspree setup:
-          1. Create a free account at https://formspree.io
-          2. Create a new form and copy its endpoint (looks like https://formspree.io/f/xxxxxxxx)
-          3. Replace YOUR_FORM_ID below with that ID
-        -->
                         <form
                             id="contactForm"
-                            action="https://formspree.io/f/YOUR_FORM_ID"
+                            name="contact"
                             method="POST"
+                            action="/"
+                            data-netlify="true"
+                            data-netlify-honeypot="bot-field"
                         >
-                            <input
-                                type="text"
-                                name="_gotcha"
-                                class="hp-field"
-                                tabindex="-1"
-                                autocomplete="off"
-                            />
-                            <input
-                                type="hidden"
-                                name="_subject"
-                                value="New quote request from awniclean.com"
-                            />
+                            <input type="hidden" name="form-name" value="contact" />
+                            <p class="hp-field" aria-hidden="true">
+                                <label
+                                    >Don’t fill this out if you’re human:
+                                    <input
+                                        type="text"
+                                        name="bot-field"
+                                        tabindex="-1"
+                                        autocomplete="off"
+                                /></label>
+                            </p>
 
                             <div class="form-row">
                                 <label for="name">Full Name</label>
@@ -782,62 +778,39 @@
 
         <footer class="site-footer">
             <div class="bubble-field" aria-hidden="true">
-                <i class="bubble" style="--x: 4%; --y: 12%; --s: 110px; --o: 0.4"></i>
-                <i class="bubble bubble-soft" style="--x: 18%; --y: 40%; --s: 36px; --o: 0.35"></i>
-                <i class="bubble" style="--x: 36%; --y: 8%; --s: 48px; --o: 0.4"></i>
-                <i class="bubble" style="--x: 54%; --y: 55%; --s: 28px; --o: 0.4"></i>
-                <i class="bubble bubble-soft" style="--x: 72%; --y: 18%; --s: 84px; --o: 0.35"></i>
-                <i class="bubble" style="--x: 90%; --y: 28%; --s: 64px; --o: 0.4"></i>
-                <i class="bubble" style="--x: 84%; --y: 68%; --s: 120px; --o: 0.3"></i>
-                <i class="bubble bubble-soft" style="--x: 8%; --y: 72%; --s: 52px; --o: 0.35"></i>
-                <i class="bubble" style="--x: 44%; --y: 78%; --s: 22px; --o: 0.4"></i>
+                <i class="bubble" style="--x: 8%; --y: 20%; --s: 48px; --o: 0.3"></i>
+                <i class="bubble bubble-soft" style="--x: 72%; --y: 35%; --s: 36px; --o: 0.28"></i>
+                <i class="bubble" style="--x: 92%; --y: 55%; --s: 28px; --o: 0.3"></i>
             </div>
-            <div class="container footer-grid">
-                <div>
-                    <a href="#top" class="logo footer-logo"
-                        ><img
-                            class="logo-footer-img"
-                            src="images/logo-full.png"
-                            alt="AwniClean — Clean Awnings. Great Impressions."
-                    /></a>
+            <div class="container footer-inner">
+                <div class="footer-row footer-row-brand">
+                    <a href="#top" class="footer-brand">AwniClean</a>
+                    <nav class="footer-nav" aria-label="Footer">
+                        <a href="#offer">Get Started</a>
+                        <a href="#packages">Packages</a>
+                        <a href="#services">Services</a>
+                        <a href="care-guide.html">Care Guide</a>
+                        <a href="#contact">Contact</a>
+                    </nav>
                 </div>
-                <div>
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#offer">Get Started</a></li>
-                        <li><a href="#packages">Packages</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="care-guide.html">Care Guide</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Service Areas</h3>
-                    <ul>
-                        <li>Phoenix</li>
-                        <li>Scottsdale</li>
-                        <li>Tempe</li>
-                        <li>Mesa</li>
-                        <li>Chandler</li>
-                        <li>Gilbert</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Contact</h3>
-                    <p><a href="tel:+16025607579">(602) 560-7579</a></p>
-                    <p>
-                        <a href="mailto:hello@awniclean.com"
-                            >hello@awniclean.com</a
-                        >
+                <div class="footer-row footer-row-meta">
+                    <p class="footer-areas">
+                        <span>Phoenix</span>
+                        <span>Scottsdale</span>
+                        <span>Tempe</span>
+                        <span>Mesa</span>
+                        <span>Chandler</span>
+                        <span>Gilbert</span>
                     </p>
-                    <p>Serving the Greater Phoenix, AZ Area</p>
+                    <p class="footer-contact">
+                        <a href="tel:+16025607579">(602) 560-7579</a>
+                        <a href="mailto:hello@awniclean.com">hello@awniclean.com</a>
+                    </p>
                 </div>
-            </div>
-            <div class="footer-bottom container">
-                <p>
-                    &copy; <span id="year"></span> AwniClean. All rights
-                    reserved.
-                </p>
+                <div class="footer-row footer-row-legal">
+                    <p>&copy; <span id="year"></span> AwniClean. All rights reserved.</p>
+                    <p>Serving the Greater Phoenix, AZ area</p>
+                </div>
             </div>
         </footer>
 

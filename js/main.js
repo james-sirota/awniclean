@@ -114,15 +114,14 @@ document.addEventListener('DOMContentLoaded', function () {
     applyBilling(checked ? checked.value : 'quarterly');
   }
 
-  // Contact form (Formspree AJAX submit with inline success/error state)
+  // Contact form (Netlify Forms AJAX submit)
   var form = document.getElementById('contactForm');
   if (form) {
     var status = document.getElementById('formStatus');
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      // Honeypot spam check
-      var honeypot = form.querySelector('input[name="_gotcha"]');
+      var honeypot = form.querySelector('input[name="bot-field"]');
       if (honeypot && honeypot.value) return;
 
       var submitBtn = form.querySelector('button[type="submit"]');
@@ -132,10 +131,11 @@ document.addEventListener('DOMContentLoaded', function () {
       status.textContent = '';
       status.className = 'form-status';
 
-      fetch(form.action, {
+      var formData = new FormData(form);
+      fetch('/', {
         method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' }
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
       })
         .then(function (response) {
           if (response.ok) {
@@ -143,12 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
             status.className = 'form-status success';
             form.reset();
           } else {
-            return response.json().then(function (data) {
-              var msg = data && data.errors
-                ? data.errors.map(function (err) { return err.message; }).join(', ')
-                : 'Something went wrong. Please call us instead.';
-              throw new Error(msg);
-            });
+            throw new Error('Something went wrong. Please call us instead.');
           }
         })
         .catch(function (err) {
