@@ -175,6 +175,25 @@
                 <line x1="4" y1="12" x2="19" y2="12" />
                 <polyline points="13 6 19 12 13 18" />
             </symbol>
+            <symbol id="icon-book" viewBox="0 0 24 24">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                <line x1="12" y1="6" x2="16" y2="6" />
+                <line x1="12" y1="10" x2="16" y2="10" />
+            </symbol>
+            <symbol id="icon-atomic" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none" />
+                <ellipse cx="12" cy="12" rx="9" ry="3.4" transform="rotate(60 12 12)" />
+                <ellipse cx="12" cy="12" rx="9" ry="3.4" transform="rotate(-60 12 12)" />
+                <ellipse cx="12" cy="12" rx="9" ry="3.4" />
+            </symbol>
+            <symbol id="icon-starburst" viewBox="0 0 24 24">
+                <path
+                    d="M12 2l1.2 7.2L20 8l-5.2 4.2L18 20l-6-3.8L6 20l3.2-7.8L4 8l6.8 1.2L12 2z"
+                    fill="currentColor"
+                    stroke="none"
+                />
+            </symbol>
         </svg>
 
         <header class="site-header" id="siteHeader">
@@ -189,10 +208,12 @@
                     <a href="#packages">Packages</a>
                     <a href="#services">Services</a>
                     <a href="#contact">Contact</a>
-                    <span class="nav-divider"></span>
-                    <a href="care-guide.html" class="nav-pill">Care Guide</a>
                 </nav>
                 <div class="header-cta">
+                    <a href="care-guide.html" class="btn btn-care"
+                        ><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg>
+                        Care Guide</a
+                    >
                     <a href="tel:+16025607579" class="btn btn-call"
                         ><svg class="icon"><use href="#icon-phone"></use></svg>
                         Call (602) 560-7579</a
@@ -218,14 +239,14 @@
             <!-- INTRO -->
             <section id="offer" class="hero">
                 <div class="container">
-                    <div class="section-head section-head-wide hero-copy">
-                        <span class="eyebrow">Arizona's First Awning Maintenance Membership</span>
-                        <h1>We Keep Your Awning<br /><em>Protected Year-Round.</em></h1>
-                        <p>
-                            Arizona sun, dust, and monsoons are hard on
-                            awnings. Our AwniCare plan gives yours the regular care it
-                            needs to stay protected and look its best.
-                        </p>
+                    <div class="hero-layout">
+                        <div class="section-head section-head-wide hero-copy">
+                            <span class="eyebrow">Arizona's First Awning Maintenance Membership</span>
+                            <h1>We Keep Your Awning<br /><em>Protected Year-Round.</em></h1>
+                            <p class="hero-lead">
+                                Arizona sun, dust, and monsoons are hard on awnings.
+                                AwniCare gives yours the care it needs to stay protected and look its best.
+                            </p>
                         <div class="feature-tags">
                             <span
                                 ><svg class="icon">
@@ -247,14 +268,63 @@
                                     <use href="#icon-sun"></use></svg
                                 >UV Protection</span
                             >
+                            <span
+                                ><svg class="icon">
+                                    <use href="#icon-sparkle"></use></svg
+                                >Deep Clean</span
+                            >
+                            <span
+                                ><svg class="icon">
+                                    <use href="#icon-check-circle"></use></svg
+                                >Spot Removal</span
+                            >
+                            <span
+                                ><svg class="icon">
+                                    <use href="#icon-wind"></use></svg
+                                >Touch-Up</span
+                            >
+                            <span
+                                ><svg class="icon">
+                                    <use href="#icon-bell"></use></svg
+                                >Repair Alerts</span
+                            >
                         </div>
                         <p class="hero-note">First maintenance visit from <strong>$59</strong> &nbsp;·&nbsp; Serving the greater Phoenix area</p>
+                        </div>
+                        <img
+                            class="hero-mascot"
+                            src="images/mascot-awniclean.png"
+                            alt="AwniClean mascot — a superhero mouse with a pressure washer"
+                            width="900"
+                            height="601"
+                        />
                     </div>
                 </div>
             </section>
 
             <!-- PACKAGES -->
+            <div class="mcm-divider" aria-hidden="true"><span></span><svg class="icon"><use href="#icon-starburst"></use></svg><span></span></div>
             <section id="packages" class="section-alt">
+                <div class="bubble-field" aria-hidden="true">
+                    <i class="bubble" style="--x: -4%; --y: 4%; --s: 170px; --o: 0.55"></i>
+                    <i class="bubble bubble-soft" style="--x: 10%; --y: 18%; --s: 46px; --o: 0.45"></i>
+                    <i class="bubble" style="--x: 22%; --y: 6%; --s: 28px; --o: 0.4"></i>
+                    <i class="bubble" style="--x: 38%; --y: -3%; --s: 72px; --o: 0.35"></i>
+                    <i class="bubble bubble-soft" style="--x: 58%; --y: 10%; --s: 38px; --o: 0.4"></i>
+                    <i class="bubble" style="--x: 78%; --y: 2%; --s: 96px; --o: 0.45"></i>
+                    <i class="bubble" style="--x: 92%; --y: 14%; --s: 54px; --o: 0.5"></i>
+                    <i class="bubble bubble-soft" style="--x: 96%; --y: 36%; --s: 140px; --o: 0.4"></i>
+                    <i class="bubble" style="--x: 84%; --y: 52%; --s: 34px; --o: 0.45"></i>
+                    <i class="bubble" style="--x: 70%; --y: 68%; --s: 88px; --o: 0.35"></i>
+                    <i class="bubble bubble-soft" style="--x: 48%; --y: 82%; --s: 120px; --o: 0.4"></i>
+                    <i class="bubble" style="--x: 28%; --y: 90%; --s: 42px; --o: 0.45"></i>
+                    <i class="bubble" style="--x: 6%; --y: 62%; --s: 64px; --o: 0.4"></i>
+                    <i class="bubble bubble-soft" style="--x: -2%; --y: 78%; --s: 100px; --o: 0.35"></i>
+                    <i class="bubble" style="--x: 15%; --y: 44%; --s: 24px; --o: 0.5"></i>
+                    <i class="bubble" style="--x: 62%; --y: 40%; --s: 30px; --o: 0.35"></i>
+                    <i class="bubble bubble-soft" style="--x: 88%; --y: 78%; --s: 48px; --o: 0.4"></i>
+                    <i class="bubble" style="--x: 42%; --y: 28%; --s: 20px; --o: 0.45"></i>
+                </div>
                 <div class="container">
                     <div class="section-head">
                         <span class="eyebrow">Recurring Care, Zero Effort</span>
@@ -399,6 +469,15 @@
                         </div>
                     </div>
 
+                    <div class="commercial-banner">
+                        <div class="card-icon"><svg class="icon"><use href="#icon-building"></use></svg></div>
+                        <div class="commercial-banner-copy">
+                            <h3>Also Trusted by Local Businesses &amp; Property Managers</h3>
+                            <p>Storefronts, restaurants, and multi-property portfolios — we handle those too.</p>
+                        </div>
+                        <a href="#contact" class="btn btn-outline-navy" data-package="Commercial Account">Request a Commercial Quote</a>
+                    </div>
+
                     <p
                         class="form-note"
                         style="text-align: center; margin-top: 1.6rem"
@@ -408,18 +487,34 @@
                         confirmed at your $59 introductory cleaning, based on
                         awning size and count.
                     </p>
-
-                    <div class="card" style="max-width: 520px; margin: 2.5rem auto 0; padding: 40px; text-align: center;">
-                        <div class="card-icon" style="margin: 0 auto 18px;"><svg class="icon"><use href="#icon-building"></use></svg></div>
-                        <h3>Also Trusted by Local Businesses &amp; Property Managers</h3>
-                        <p>Storefronts, restaurants, and multi-property portfolios — we handle those too.</p>
-                        <a href="#contact" class="btn btn-outline-navy" data-package="Commercial Account">Request a Commercial Quote</a>
-                    </div>
                 </div>
             </section>
 
             <!-- SERVICES -->
+            <div class="mcm-divider" aria-hidden="true"><span></span><svg class="icon"><use href="#icon-atomic"></use></svg><span></span></div>
             <section id="services">
+                <div class="bubble-field" aria-hidden="true">
+                    <i class="bubble" style="--x: -3%; --y: -4%; --s: 180px; --o: 0.65"></i>
+                    <i class="bubble bubble-soft" style="--x: 14%; --y: 16%; --s: 44px; --o: 0.4"></i>
+                    <i class="bubble" style="--x: 26%; --y: 4%; --s: 26px; --o: 0.45"></i>
+                    <i class="bubble" style="--x: 48%; --y: -2%; --s: 68px; --o: 0.35"></i>
+                    <i class="bubble bubble-soft" style="--x: 68%; --y: 10%; --s: 36px; --o: 0.45"></i>
+                    <i class="bubble" style="--x: 82%; --y: 2%; --s: 90px; --o: 0.4"></i>
+                    <i class="bubble" style="--x: 94%; --y: 22%; --s: 52px; --o: 0.5"></i>
+                    <i class="bubble bubble-soft" style="--x: 90%; --y: 52%; --s: 210px; --o: 0.42"></i>
+                    <i class="bubble" style="--x: 74%; --y: 48%; --s: 30px; --o: 0.4"></i>
+                    <i class="bubble" style="--x: 58%; --y: 70%; --s: 78px; --o: 0.35"></i>
+                    <i class="bubble bubble-soft" style="--x: 36%; --y: 86%; --s: 110px; --o: 0.4"></i>
+                    <i class="bubble" style="--x: 18%; --y: 76%; --s: 40px; --o: 0.45"></i>
+                    <i class="bubble" style="--x: 4%; --y: 58%; --s: 64px; --o: 0.4"></i>
+                    <i class="bubble bubble-soft" style="--x: -5%; --y: 82%; --s: 120px; --o: 0.35"></i>
+                    <i class="bubble" style="--x: 42%; --y: 38%; --s: 22px; --o: 0.5"></i>
+                    <i class="bubble" style="--x: 62%; --y: 28%; --s: 18px; --o: 0.4"></i>
+                    <i class="bubble bubble-soft" style="--x: 8%; --y: 36%; --s: 32px; --o: 0.4"></i>
+                    <i class="bubble" style="--x: 88%; --y: 82%; --s: 46px; --o: 0.4"></i>
+                    <i class="bubble" style="--x: 52%; --y: 54%; --s: 28px; --o: 0.35"></i>
+                    <i class="bubble bubble-soft" style="--x: 30%; --y: 48%; --s: 56px; --o: 0.3"></i>
+                </div>
                 <div class="container">
                     <div class="section-head">
                         <span class="eyebrow">What's Included</span>
@@ -513,8 +608,27 @@
                 </div>
             </section>
 
+            <div class="mcm-divider" aria-hidden="true"><span></span><svg class="icon"><use href="#icon-starburst"></use></svg><span></span></div>
             <!-- CONTACT -->
             <section id="contact" class="section-alt">
+                <div class="bubble-field" aria-hidden="true">
+                    <i class="bubble" style="--x: 94%; --y: 4%; --s: 150px; --o: 0.45"></i>
+                    <i class="bubble bubble-soft" style="--x: 78%; --y: 12%; --s: 40px; --o: 0.4"></i>
+                    <i class="bubble" style="--x: 62%; --y: -2%; --s: 68px; --o: 0.35"></i>
+                    <i class="bubble" style="--x: 18%; --y: 6%; --s: 52px; --o: 0.5"></i>
+                    <i class="bubble bubble-soft" style="--x: 4%; --y: 16%; --s: 34px; --o: 0.4"></i>
+                    <i class="bubble" style="--x: -5%; --y: 38%; --s: 130px; --o: 0.4"></i>
+                    <i class="bubble" style="--x: 10%; --y: 52%; --s: 26px; --o: 0.45"></i>
+                    <i class="bubble bubble-soft" style="--x: 28%; --y: 70%; --s: 88px; --o: 0.35"></i>
+                    <i class="bubble" style="--x: 48%; --y: 86%; --s: 44px; --o: 0.4"></i>
+                    <i class="bubble" style="--x: 70%; --y: 76%; --s: 100px; --o: 0.4"></i>
+                    <i class="bubble bubble-soft" style="--x: 90%; --y: 62%; --s: 56px; --o: 0.4"></i>
+                    <i class="bubble" style="--x: 86%; --y: 88%; --s: 30px; --o: 0.45"></i>
+                    <i class="bubble" style="--x: 40%; --y: 28%; --s: 22px; --o: 0.4"></i>
+                    <i class="bubble bubble-soft" style="--x: 54%; --y: 48%; --s: 36px; --o: 0.35"></i>
+                    <i class="bubble" style="--x: 8%; --y: 84%; --s: 72px; --o: 0.35"></i>
+                    <i class="bubble" style="--x: 96%; --y: 32%; --s: 24px; --o: 0.5"></i>
+                </div>
                 <div class="container contact-wrap">
                     <div>
                         <span class="eyebrow">Get Started</span>
@@ -623,46 +737,6 @@
                                 />
                             </div>
                             <div class="form-row">
-                                <label for="city">City</label>
-                                <select id="city" name="city">
-                                    <option value="">Select your city</option>
-                                    <option>Phoenix</option>
-                                    <option>Scottsdale</option>
-                                    <option>Tempe</option>
-                                    <option>Mesa</option>
-                                    <option>Chandler</option>
-                                    <option>Gilbert</option>
-                                    <option>Other</option>
-                                </select>
-                            </div>
-                            <div class="form-row">
-                                <label for="packageSelect">Interested In</label>
-                                <select id="packageSelect" name="package">
-                                    <option value="Not Sure">
-                                        Not sure yet — help me choose
-                                    </option>
-                                    <optgroup label="Residential Packages">
-                                        <option value="AwniCare Essential">
-                                            AwniCare Essential ($79/quarter)
-                                        </option>
-                                        <option value="AwniCare Signature">
-                                            AwniCare Signature ($149/quarter)
-                                        </option>
-                                        <option value="AwniCare Premier">
-                                            AwniCare Premier ($219/quarter)
-                                        </option>
-                                    </optgroup>
-                                    <optgroup label="Commercial &amp; Property">
-                                        <option value="Commercial Account">
-                                            Commercial account
-                                        </option>
-                                        <option value="Property Management">
-                                            Property management / multi-site
-                                        </option>
-                                    </optgroup>
-                                </select>
-                            </div>
-                            <div class="form-row">
                                 <label for="message"
                                     >Tell Us About Your Awning
                                     <span
@@ -707,6 +781,17 @@
         </main>
 
         <footer class="site-footer">
+            <div class="bubble-field" aria-hidden="true">
+                <i class="bubble" style="--x: 4%; --y: 12%; --s: 110px; --o: 0.4"></i>
+                <i class="bubble bubble-soft" style="--x: 18%; --y: 40%; --s: 36px; --o: 0.35"></i>
+                <i class="bubble" style="--x: 36%; --y: 8%; --s: 48px; --o: 0.4"></i>
+                <i class="bubble" style="--x: 54%; --y: 55%; --s: 28px; --o: 0.4"></i>
+                <i class="bubble bubble-soft" style="--x: 72%; --y: 18%; --s: 84px; --o: 0.35"></i>
+                <i class="bubble" style="--x: 90%; --y: 28%; --s: 64px; --o: 0.4"></i>
+                <i class="bubble" style="--x: 84%; --y: 68%; --s: 120px; --o: 0.3"></i>
+                <i class="bubble bubble-soft" style="--x: 8%; --y: 72%; --s: 52px; --o: 0.35"></i>
+                <i class="bubble" style="--x: 44%; --y: 78%; --s: 22px; --o: 0.4"></i>
+            </div>
             <div class="container footer-grid">
                 <div>
                     <a href="#top" class="logo footer-logo"

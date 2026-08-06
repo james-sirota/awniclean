@@ -15,6 +15,52 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Section scroll-spy — terracotta underline on matching nav link
+  var spyIds = ['packages', 'services', 'contact'];
+  var spyLinks = spyIds
+    .map(function (id) {
+      return document.querySelector('.site-nav a[href="#' + id + '"]');
+    })
+    .filter(Boolean);
+  var spySections = spyIds
+    .map(function (id) {
+      return document.getElementById(id);
+    })
+    .filter(Boolean);
+
+  if (spyLinks.length && spySections.length === spyIds.length) {
+    var setSpyActive = function (id) {
+      spyLinks.forEach(function (link) {
+        var match = !!id && link.getAttribute('href') === '#' + id;
+        link.classList.toggle('active', match);
+      });
+    };
+
+    var updateSpy = function () {
+      var offset = (header ? header.offsetHeight : 72) + 48;
+      var marker = window.scrollY + offset;
+      var current = null;
+      spySections.forEach(function (section) {
+        if (section.offsetTop <= marker) current = section.id;
+      });
+      setSpyActive(current);
+    };
+
+    window.addEventListener('scroll', updateSpy, { passive: true });
+    window.addEventListener('resize', updateSpy);
+    updateSpy();
+
+    spyLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        setSpyActive(link.getAttribute('href').slice(1));
+        if (header && header.classList.contains('nav-open')) {
+          header.classList.remove('nav-open');
+          if (toggle) toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  }
+
   // "How It Works" interactive journey stepper
   var journeySteps = document.querySelectorAll('.journey-step');
   var journeyPanels = document.querySelectorAll('.journey-panel');
@@ -66,18 +112,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     var checked = document.querySelector('input[name="billing"]:checked');
     applyBilling(checked ? checked.value : 'quarterly');
-  }
-
-  // "Choose {Package}" buttons: preselect the package on the in-page contact form
-  var packageSelect = document.getElementById('packageSelect');
-  if (packageSelect) {
-    document.querySelectorAll('[data-package]').forEach(function (el) {
-      el.addEventListener('click', function () {
-        var pkg = el.getAttribute('data-package');
-        var optionExists = Array.from(packageSelect.options).some(function (o) { return o.value === pkg; });
-        if (optionExists) packageSelect.value = pkg;
-      });
-    });
   }
 
   // Contact form (Formspree AJAX submit with inline success/error state)
