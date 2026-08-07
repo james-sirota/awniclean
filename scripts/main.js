@@ -15,6 +15,42 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Care Guides dropdowns
+  var dropdowns = document.querySelectorAll('.nav-dropdown');
+  dropdowns.forEach(function (dropdown) {
+    var btn = dropdown.querySelector('.nav-dropdown-toggle');
+    if (!btn) return;
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var willOpen = !dropdown.classList.contains('open');
+      dropdowns.forEach(function (other) {
+        other.classList.remove('open');
+        var otherBtn = other.querySelector('.nav-dropdown-toggle');
+        if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+      });
+      if (willOpen) {
+        dropdown.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+  document.addEventListener('click', function () {
+    dropdowns.forEach(function (dropdown) {
+      dropdown.classList.remove('open');
+      var btn = dropdown.querySelector('.nav-dropdown-toggle');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    dropdowns.forEach(function (dropdown) {
+      dropdown.classList.remove('open');
+      var btn = dropdown.querySelector('.nav-dropdown-toggle');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
   // Section scroll-spy — terracotta underline on matching nav link
   var spyIds = ['packages', 'services', 'contact'];
   var spyLinks = spyIds
