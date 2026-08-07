@@ -1,7 +1,13 @@
-# Pretty URL: /care-guide is canonical; .html permanently redirects to it.
+# Pretty URLs: strip .html; those paths are canonical.
 [[redirects]]
   from = "/care-guide.html"
   to = "/care-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial-guide.html"
+  to = "/commercial-guide"
   status = 301
   force = true
 
