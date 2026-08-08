@@ -313,8 +313,12 @@ section[id] { scroll-margin-top: 88px; }
   color: var(--terracotta);
   background: rgba(200, 92, 46, 0.08);
 }
-.nav-mobile-only {
-  display: none;
+.site-nav .nav-dropdown {
+  margin-left: 4px;
+}
+.site-nav .nav-dropdown-menu {
+  left: 0;
+  right: auto;
 }
 
 .nav-toggle {
@@ -1060,19 +1064,22 @@ details.faq p { margin-top: 12px; }
     padding: 20px 24px;
     border-bottom: 1px solid var(--gray-200);
     gap: 18px;
+    z-index: 150;
   }
-  .nav-mobile-only {
+  .site-nav .nav-dropdown {
+    margin-left: 0;
+    width: 100%;
+  }
+  .site-nav .nav-dropdown-menu {
+    position: static;
+    display: none;
+    min-width: 0;
+    width: 100%;
+    margin-top: 8px;
+    box-shadow: none;
+  }
+  .site-nav .nav-dropdown.open .nav-dropdown-menu {
     display: block;
-    position: relative;
-    padding: 4px 0;
-    font-family: var(--font-body);
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: var(--gray-900);
-  }
-  .nav-mobile-only:hover {
-    color: var(--terracotta-dark);
-    text-decoration: none;
   }
   .nav-divider { display: none; }
   section { padding: 52px 0; }
@@ -1429,8 +1436,10 @@ h1 em { color: var(--terracotta); font-weight: 600; }
     padding: 11px 14px;
     font-size: 0.85rem;
   }
-  .header-cta .btn-care { padding-left: 12px; padding-right: 12px; }
-  .header-cta .nav-dropdown-toggle.btn-care { padding-left: 12px; padding-right: 12px; }
+  .site-nav .btn-care {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 }
 
 /* ==========================================================================
